@@ -33,13 +33,13 @@ module.exports = function () {
             value: this.totalPages > 1
           }],
 
-          "class": "pagination VuePagination__pagination" },
+          "class": "c-pagination VuePagination__pagination" },
         [h(
           "li",
-          { "class": "VuePagination__pagination-item page-item VuePagination__pagination-item-prev-chunk " + this.allowedChunkClass(-1) },
+          { "class": "c-pagination__item VuePagination__pagination-item page-item VuePagination__pagination-item-prev-chunk " + this.allowedChunkClass(-1) },
           [h(
             "a",
-            { "class": "page-link", attrs: { href: "javascript:void(0);"
+            { "class": "c-pagination__link page-link", attrs: { href: "javascript:void(0);"
               },
               on: {
                 "click": this.setChunk.bind(this, -1)
@@ -49,10 +49,10 @@ module.exports = function () {
           )]
         ), h(
           "li",
-          { "class": "VuePagination__pagination-item page-item VuePagination__pagination-item-prev-page " + this.allowedPageClass(this.page - 1) },
+          { "class": "c-pagination__item VuePagination__pagination-item page-item VuePagination__pagination-item-prev-page " + this.allowedPageClass(this.page - 1) },
           [h(
             "a",
-            { "class": "page-link", attrs: { href: "javascript:void(0);"
+            { "class": "c-pagination__link page-link", attrs: { href: "javascript:void(0);"
               },
               on: {
                 "click": this.prev.bind(this)
@@ -62,10 +62,10 @@ module.exports = function () {
           )]
         ), items, h(
           "li",
-          { "class": "VuePagination__pagination-item page-item VuePagination__pagination-item-next-page " + this.allowedPageClass(this.page + 1) },
+          { "class": "c-pagination__item VuePagination__pagination-item page-item VuePagination__pagination-item-next-page " + this.allowedPageClass(this.page + 1) },
           [h(
             "a",
-            { "class": "page-link", attrs: { href: "javascript:void(0);"
+            { "class": "c-pagination__link page-link", attrs: { href: "javascript:void(0);"
               },
               on: {
                 "click": this.next.bind(this)
@@ -75,10 +75,10 @@ module.exports = function () {
           )]
         ), h(
           "li",
-          { "class": "VuePagination__pagination-item page-item VuePagination__pagination-item-next-chunk " + this.allowedChunkClass(1) },
+          { "class": "c-pagination__item VuePagination__pagination-item page-item VuePagination__pagination-item-next-chunk " + this.allowedChunkClass(1) },
           [h(
             "a",
-            { "class": "page-link", attrs: { href: "javascript:void(0);"
+            { "class": "c-pagination__link page-link", attrs: { href: "javascript:void(0);"
               },
               on: {
                 "click": this.setChunk.bind(this, 1)
