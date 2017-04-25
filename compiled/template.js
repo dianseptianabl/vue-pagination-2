@@ -8,10 +8,10 @@ module.exports = function () {
     this.pages.map(function (page) {
       items.push(h(
         "li",
-        { "class": "VuePagination__pagination-item page-item " + this.activeClass(page) },
+        { "class": "c-pagination__item VuePagination__pagination-item page-item " + this.activeClass(page) },
         [h(
           "a",
-          { "class": "page-link", attrs: { href: "javascript:void(0);"
+          { "class": "c-pagination__link page-link", attrs: { href: "javascript:void(0);"
             },
             on: {
               "click": this.setPage.bind(this, page)
