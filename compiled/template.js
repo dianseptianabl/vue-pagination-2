@@ -39,7 +39,7 @@ module.exports = function () {
           { "class": "c-pagination__item VuePagination__pagination-item page-item VuePagination__pagination-item-prev-chunk " + this.allowedChunkClass(-1) },
           [h(
             "a",
-            { "class": "c-pagination__link page-link", attrs: { href: "javascript:void(0);"
+            { "class": "c-pagination__btn page-link", attrs: { href: "javascript:void(0);"
               },
               on: {
                 "click": this.setChunk.bind(this, -1)
@@ -52,33 +52,33 @@ module.exports = function () {
           { "class": "c-pagination__item VuePagination__pagination-item page-item VuePagination__pagination-item-prev-page " + this.allowedPageClass(this.page - 1) },
           [h(
             "a",
-            { "class": "c-pagination__link page-link", attrs: { href: "javascript:void(0);"
+            { "class": "c-pagination__btn page-link", attrs: { href: "javascript:void(0);"
               },
               on: {
                 "click": this.prev.bind(this)
               }
             },
-            ["<"]
+            [h("span", { "class": "c-icon c-icon--arrow-backward" })]
           )]
         ), items, h(
           "li",
           { "class": "c-pagination__item VuePagination__pagination-item page-item VuePagination__pagination-item-next-page " + this.allowedPageClass(this.page + 1) },
           [h(
             "a",
-            { "class": "c-pagination__link page-link", attrs: { href: "javascript:void(0);"
+            { "class": "c-pagination__btn page-link", attrs: { href: "javascript:void(0);"
               },
               on: {
                 "click": this.next.bind(this)
               }
             },
-            [">"]
+            [h("span", { "class": "c-icon c-icon--arrow-forward" })]
           )]
         ), h(
           "li",
           { "class": "c-pagination__item VuePagination__pagination-item page-item VuePagination__pagination-item-next-chunk " + this.allowedChunkClass(1) },
           [h(
             "a",
-            { "class": "c-pagination__link page-link", attrs: { href: "javascript:void(0);"
+            { "class": "c-pagination__btn page-link", attrs: { href: "javascript:void(0);"
               },
               on: {
                 "click": this.setChunk.bind(this, 1)
